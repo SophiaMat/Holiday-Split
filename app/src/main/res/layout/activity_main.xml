@@ -54,13 +54,15 @@
         app:layout_constraintTop_toBottomOf="@+id/Partner2" />
 
     <EditText
-        android:id="@+id/editTextNumberDecimal"
+        android:id="@+id/moneySpent"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="33dp"
         android:ems="10"
         android:fontFamily="@font/muli"
+        android:hint="money spent: "
         android:inputType="numberDecimal"
+        android:singleLine="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/currentStatus1" />
@@ -72,10 +74,10 @@
         android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal">
+        app:layout_constraintTop_toBottomOf="@+id/moneySpent">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/radioButton1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/muli"
