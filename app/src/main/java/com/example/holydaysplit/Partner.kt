@@ -2,8 +2,6 @@ package com.example.holydaysplit
 
 import kotlin.properties.Delegates
 
-class Partner {
-    var name = "Noname"
-    var moneyToSpend = 0
-    
+data class Partner(val name: String) {
+    var moneyToSpend = 0.0
 }
