@@ -15,5 +15,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun setValuePartner(moneyToSpend: Double) {
         person1.moneyToSpend = moneyToSpend
+        currentStatus1.text = person1.moneyToSpend.toString() + "€"
     }
 }
