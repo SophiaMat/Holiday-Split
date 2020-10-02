@@ -20,7 +20,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun setNames(){
         Partner1.text = person1.name
+        radioButton1.text = person1.name
+
         Partner2.text = person2.name
+        radioButton2.text = person2.name
     }
 
     private fun setMoneyToSpend(partner: Partner, moneyToSpend: Double) {
