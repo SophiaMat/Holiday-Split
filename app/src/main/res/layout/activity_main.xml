@@ -14,7 +14,7 @@
         android:layout_marginStart="80dp"
         android:layout_marginTop="24dp"
         android:fontFamily="@font/muli_bold"
-        android:text="Tom"
+        android:text="Person1"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,7 +26,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="80dp"
         android:fontFamily="@font/muli_bold"
-        android:text="Sophia"
+        android:text="Person2"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -35,7 +35,7 @@
         android:id="@+id/currentStatus1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
+        android:layout_marginStart="64dp"
         android:layout_marginTop="184dp"
         android:fontFamily="@font/muli"
         android:text="aktueller Stand"
@@ -47,7 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="184dp"
-        android:layout_marginEnd="60dp"
+        android:layout_marginEnd="52dp"
         android:fontFamily="@font/muli"
         android:text="aktueller Stand"
         app:layout_constraintEnd_toEndOf="parent"
@@ -82,14 +82,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/muli"
-            android:text="Tom" />
+            android:text="Person1" />
 
         <RadioButton
             android:id="@+id/radioButton2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/muli"
-            android:text="Sophia" />
+            android:text="Person2" />
     </RadioGroup>
 
     <Button
@@ -143,7 +143,7 @@
         app:layout_constraintTop_toBottomOf="@+id/Partner2" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/startingValue1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="76dp"
@@ -156,7 +156,7 @@
         app:layout_constraintTop_toBottomOf="@+id/Partner1" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/startingValue2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="122dp"
@@ -165,7 +165,7 @@
         android:text="startingValue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.428"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toEndOf="@+id/startingValue1"
         app:layout_constraintTop_toBottomOf="@+id/Partner2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
