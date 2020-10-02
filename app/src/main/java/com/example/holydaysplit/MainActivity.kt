@@ -13,9 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setNames()
         setStartingMoney(person1, 300.0)
-        setMoneyToSpend(person1, 300.0)
         setStartingMoney(person2, 400.0)
-        setMoneyToSpend(person2, 400.0)
     }
 
     private fun setNames(){
@@ -36,6 +34,9 @@ class MainActivity : AppCompatActivity() {
         partner.startingMoney = startingMoney
         startingValue1.text = person1.startingMoney.toString() + "€"
         startingValue2.text = person2.startingMoney.toString() + "€"
+
+        currentStatus1.text = person1.startingMoney.toString() + "€"
+        currentStatus2.text = person2.startingMoney.toString() + "€"
     }
 
 }
