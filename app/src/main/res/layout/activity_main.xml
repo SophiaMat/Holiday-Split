@@ -100,6 +100,7 @@
         android:layout_marginTop="40dp"
         android:background="@color/colorPrimary"
         android:fontFamily="@font/muli_bold"
+        android:onClick="setNewMoneySpentValue"
         android:text="confirm"
         android:textColor="#EEF4F6"
         app:layout_constraintEnd_toEndOf="parent"
