@@ -61,12 +61,17 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-
+        bringViewToStatusBack()
     }
 
     private fun calculateNewCurrentStatus(person: Partner, money: Double){
         person.moneyToSpend = person.moneyToSpend - money
         setCurrentMoney()
+    }
+
+    private fun bringViewToStatusBack(){
+        moneySpent.setText("")
+        radioGroup.clearCheck()
     }
 
 }
