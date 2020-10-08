@@ -4,13 +4,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.RadioButton
-import java.util.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
 
     val persons = mutableListOf<Partner>()
+    val repository = Repository()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,6 +62,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         bringViewToStatusBack()
+        repository.saveData(persons, this)
     }
 
     private fun calculateNewCurrentStatus(person: Partner, money: Double){
