@@ -9,19 +9,26 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    val persons = mutableListOf<Partner>()
+    var persons = mutableListOf<Partner>()
     val repository = Repository()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val person1 = Partner("Tom")
-        val person2 = Partner("Sophia")
-        persons.add(person1)
-        persons.add(person2)
+        persons = repository.retrieveData(this) as MutableList<Partner>
+        if(persons == null){
+            val person1 = Partner("Tom")
+            val person2 = Partner("Sophia")
+            persons.add(person1)
+            persons.add(person2)
+            setStartingMoney(persons[0], 300.0)
+            setStartingMoney(persons[1], 400.0)
+            persons[0].moneyToSpend = persons[0].startingMoney
+            persons[1].moneyToSpend = persons[1].startingMoney
+        }
         setNames()
-        setStartingMoney(person1, 300.0)
-        setStartingMoney(person2, 400.0)
+        setMoneyAppstart()
+        setMoneyAppstart()
     }
 
     private fun setNames(){
@@ -32,13 +39,14 @@ class MainActivity : AppCompatActivity() {
         radioButton2.text = persons[1].name
     }
 
-    private fun setStartingMoney(partner: Partner, startingMoney: Double) {
-        partner.startingMoney = startingMoney
+    private fun setStartingMoney(person: Partner, money: Double){
+        person.startingMoney = money
+    }
+
+    private fun setMoneyAppstart() {
         startingValue1.text = persons[0].startingMoney.toString() + "€"
         startingValue2.text = persons[1].startingMoney.toString() + "€"
 
-        persons[0].moneyToSpend = persons[0].startingMoney
-        persons[1].moneyToSpend = persons[1].startingMoney
         setCurrentMoney()
     }
 
