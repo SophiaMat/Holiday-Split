@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         persons = repository.retrieveData(this) as MutableList<Partner>
-        if(persons == null){
+        if(persons.isNullOrEmpty()){
             showStartdataScreen()
             val person1 = Partner("Tom")
             val person2 = Partner("Sophia")
@@ -65,6 +65,10 @@ class MainActivity : AppCompatActivity() {
     private fun setCurrentMoney(){
         currentStatus1.text = persons[0].moneyToSpend.toString() + "€"
         currentStatus2.text = persons[1].moneyToSpend.toString() + "€"
+    }
+
+    fun deleteAllData(view: View){
+        repository.deleteAllData(this)
     }
 
     fun setNewMoneySpentValue(view: View) {

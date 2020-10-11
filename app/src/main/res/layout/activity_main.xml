@@ -97,7 +97,7 @@
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="24dp"
         android:background="@color/colorPrimary"
         android:fontFamily="@font/muli_bold"
         android:onClick="setNewMoneySpentValue"
@@ -112,10 +112,11 @@
         android:id="@+id/totalState"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/muli_bold"
         android:text="gesamter Stand"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/confirm" />
 
@@ -168,5 +169,20 @@
         app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toEndOf="@+id/startingValue1"
         app:layout_constraintTop_toBottomOf="@+id/Partner2" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/muli_bold"
+        android:onClick="deleteAllData"
+        android:text="delete"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirm" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

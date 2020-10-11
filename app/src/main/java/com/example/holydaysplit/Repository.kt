@@ -35,12 +35,30 @@ class Repository{
                 val jsonFile = File(file, "DB.json")
                 val reader = FileReader(jsonFile)
                 val objectType = object : TypeToken<List<Partner>>(){}.type
-                val persons = gson.fromJson<List<Partner>>(reader, objectType)
+                var persons = gson.fromJson<List<Partner>>(reader, objectType)
+                if(persons == null){
+                    persons = mutableListOf<Partner>()
+                }
                 return persons
             } catch (e: Exception){
                 e.printStackTrace()
             }
         }
         return null
+    }
+
+    fun deleteAllData(context: Context){
+        val file = File(context.getExternalFilesDir(null), "/location")
+        if(file.exists()){
+            try {
+                val jsonFile = File(file, "DB.json")
+                val writer = FileWriter(jsonFile)
+                writer.write("")
+                writer.flush()
+                writer.close()
+            } catch (e: Exception){
+                e.printStackTrace()
+            }
+        }
     }
 }
