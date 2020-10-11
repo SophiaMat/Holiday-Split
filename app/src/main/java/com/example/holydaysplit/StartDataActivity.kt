@@ -1,11 +1,15 @@
 package com.example.holydaysplit
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import kotlinx.android.synthetic.main.activity_start_data.*
 
 class StartDataActivity : AppCompatActivity() {
+
+    val repository = Repository()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start_data)
@@ -26,5 +30,9 @@ class StartDataActivity : AppCompatActivity() {
         } catch (e: Exception) {
             e.printStackTrace()
         }
+        repository.saveData(persons, this)
+        val intent = Intent(this, MainActivity::class.java).apply{
+        }
+        startActivity(intent)
     }
 }
