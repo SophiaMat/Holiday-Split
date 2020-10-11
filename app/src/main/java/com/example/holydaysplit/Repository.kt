@@ -44,7 +44,8 @@ class Repository{
                 e.printStackTrace()
             }
         }
-        return null
+        val persons = mutableListOf<Partner>()
+        return persons
     }
 
     fun deleteAllData(context: Context){

@@ -8,7 +8,6 @@ import android.widget.RadioButton
 import kotlinx.android.synthetic.main.activity_main.*
 
 
-const val STARTUP_DATA = "com.example.holydaysplit.DATA"
 
 class MainActivity : AppCompatActivity() {
 
@@ -37,8 +36,6 @@ class MainActivity : AppCompatActivity() {
 
     fun showStartdataScreen(){
         val intent = Intent(this, StartDataActivity::class.java).apply{
-            val test = "test"
-            putExtra(STARTUP_DATA, test)
         }
         startActivity(intent)
     }
@@ -69,6 +66,7 @@ class MainActivity : AppCompatActivity() {
 
     fun deleteAllData(view: View){
         repository.deleteAllData(this)
+        showStartdataScreen()
     }
 
     fun setNewMoneySpentValue(view: View) {
