@@ -1,11 +1,14 @@
 package com.example.holydaysplit
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.RadioButton
 import kotlinx.android.synthetic.main.activity_main.*
 
+
+const val STARTUP_DATA = "com.example.holydaysplit.DATA"
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         persons = repository.retrieveData(this) as MutableList<Partner>
         if(persons == null){
+            showStartdataScreen()
             val person1 = Partner("Tom")
             val person2 = Partner("Sophia")
             persons.add(person1)
@@ -29,6 +33,14 @@ class MainActivity : AppCompatActivity() {
         setNames()
         setMoneyAppstart()
         setMoneyAppstart()
+    }
+
+    fun showStartdataScreen(){
+        val intent = Intent(this, StartDataActivity::class.java).apply{
+            val test = "test"
+            putExtra(STARTUP_DATA, test)
+        }
+        startActivity(intent)
     }
 
     private fun setNames(){
