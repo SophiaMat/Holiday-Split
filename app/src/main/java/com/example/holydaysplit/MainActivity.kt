@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.RadioButton
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_spend_money.*
+import java.io.File
 
 
 class MainActivity : AppCompatActivity() {
@@ -28,9 +29,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun getPersonsList(): MutableList<Partner> {
-        return persons
-    }
 
     private fun setNames(){
         Partner1.text = persons[0].name

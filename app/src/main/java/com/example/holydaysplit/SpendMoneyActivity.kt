@@ -1,5 +1,6 @@
 package com.example.holydaysplit
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -33,16 +34,18 @@ class SpendMoneyActivity : AppCompatActivity() {
             }
         }
         repository.saveData(persons, this)
+        val intent = Intent(this, MainActivity::class.java).apply{
+        }
+        startActivity(intent)
     }
 
     private fun calculateNewCurrentStatus(person: Partner, money: Double){
         person.moneyToSpend = person.moneyToSpend - money
-        MainActivity().setCurrentMoney()
     }
 
     private fun setNamesRadioButton(){
         persons = repository.retrieveData(this) as MutableList<Partner>
-        radioButton1.text =  persons[0].name.toString()
+        radioButton1.text =  persons[0].name
 
         radioButton2.text = persons[1].name
     }
