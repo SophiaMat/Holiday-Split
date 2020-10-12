@@ -35,7 +35,7 @@
         android:id="@+id/currentStatus1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
+        android:layout_marginStart="76dp"
         android:layout_marginTop="184dp"
         android:fontFamily="@font/muli"
         android:text="aktueller Stand"
@@ -46,11 +46,11 @@
         android:id="@+id/currentStatus2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="280dp"
         android:layout_marginTop="184dp"
-        android:layout_marginEnd="52dp"
         android:fontFamily="@font/muli"
         android:text="aktueller Stand"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Partner2" />
 
     <EditText
@@ -150,10 +150,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="76dp"
         android:layout_marginTop="84dp"
-        android:layout_marginEnd="277dp"
         android:text="startingValue"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.36"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Partner1" />
 
@@ -161,13 +158,10 @@
         android:id="@+id/startingValue2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="122dp"
+        android:layout_marginStart="280dp"
         android:layout_marginTop="84dp"
-        android:layout_marginEnd="84dp"
         android:text="startingValue"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
-        app:layout_constraintStart_toEndOf="@+id/startingValue1"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Partner2" />
 
     <Button
@@ -184,5 +178,19 @@
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/confirm" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/muli_bold"
+        android:onClick="showMoneySpendingScreen"
+        android:text="spend money"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/totalState" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,7 +8,7 @@ import android.widget.RadioButton
 import kotlinx.android.synthetic.main.activity_main.*
 
 
-
+const val PERSONS = "com.example.holydaysplit.LIST"
 class MainActivity : AppCompatActivity() {
 
     var persons = mutableListOf<Partner>()
@@ -34,16 +34,20 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    fun showMoneySpendingScreen(view: View){
+        val intent = Intent(this, SpendMoneyActivity::class.java).apply{
+            //val passPersons = persons as ArrayList<Partner>
+            //putExtra(PERSONS, passPersons)
+        }
+        startActivity(intent)
+    }
+
     private fun setNames(){
         Partner1.text = persons[0].name
         radioButton1.text = persons[0].name
 
         Partner2.text = persons[1].name
         radioButton2.text = persons[1].name
-    }
-
-    private fun setStartingMoney(person: Partner, money: Double){
-        person.startingMoney = money
     }
 
     private fun setMoneyAppstart() {
@@ -56,6 +60,8 @@ class MainActivity : AppCompatActivity() {
     private fun setCurrentMoney(){
         currentStatus1.text = persons[0].moneyToSpend.toString() + "€"
         currentStatus2.text = persons[1].moneyToSpend.toString() + "€"
+        val total =  persons[0].moneyToSpend + persons[1].moneyToSpend
+        totalState.text = total.toString()
     }
 
     fun deleteAllData(view: View){
