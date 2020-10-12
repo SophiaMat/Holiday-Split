@@ -20,18 +20,12 @@ class MainActivity : AppCompatActivity() {
         persons = repository.retrieveData(this) as MutableList<Partner>
         if(persons.isNullOrEmpty()){
             showStartdataScreen()
-            val person1 = Partner("Tom")
-            val person2 = Partner("Sophia")
-            persons.add(person1)
-            persons.add(person2)
-            setStartingMoney(persons[0], 300.0)
-            setStartingMoney(persons[1], 400.0)
-            persons[0].moneyToSpend = persons[0].startingMoney
-            persons[1].moneyToSpend = persons[1].startingMoney
         }
-        setNames()
-        setMoneyAppstart()
-        setMoneyAppstart()
+        else{
+            setNames()
+            setMoneyAppstart()
+            setMoneyAppstart()
+        }
     }
 
     fun showStartdataScreen(){
