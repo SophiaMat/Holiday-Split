@@ -53,72 +53,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Partner2" />
 
-    <EditText
-        android:id="@+id/moneySpent"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:ems="10"
-        android:fontFamily="@font/muli"
-        android:hint="money spent: "
-        android:inputType="numberDecimal"
-        android:singleLine="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/currentStatus1" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="0dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/moneySpent">
-
-        <RadioButton
-            android:id="@+id/radioButton1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/muli"
-            android:text="Person1" />
-
-        <RadioButton
-            android:id="@+id/radioButton2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/muli"
-            android:text="Person2" />
-    </RadioGroup>
-
-    <Button
-        android:id="@+id/confirm"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:background="@color/colorPrimary"
-        android:fontFamily="@font/muli_bold"
-        android:onClick="setNewMoneySpentValue"
-        android:text="confirm"
-        android:textColor="#EEF4F6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
-
     <TextView
         android:id="@+id/totalState"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="54dp"
         android:fontFamily="@font/muli_bold"
         android:text="gesamter Stand"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirm" />
+        app:layout_constraintTop_toBottomOf="@+id/currentStatus1" />
 
     <TextView
         android:id="@+id/textView"
@@ -169,28 +114,26 @@
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="28dp"
         android:background="@color/colorPrimary"
         android:fontFamily="@font/muli_bold"
         android:onClick="deleteAllData"
         android:text="delete"
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirm" />
+        app:layout_constraintTop_toBottomOf="@+id/totalState" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="28dp"
         android:background="@color/colorPrimary"
         android:fontFamily="@font/muli_bold"
         android:onClick="showMoneySpendingScreen"
         android:text="spend money"
         android:textColor="#FFFFFF"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/totalState" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
