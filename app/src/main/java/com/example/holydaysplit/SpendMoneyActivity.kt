@@ -25,14 +25,14 @@ class SpendMoneyActivity : AppCompatActivity() {
         if(id!=-1){
             if(moneyparsed != null){
                 val radio: RadioButton = findViewById<RadioButton>(id)
-                for(item in MainActivity().persons){
+                for(item in persons){
                     if (item.name == radio.text.toString()){
                         calculateNewCurrentStatus(item, moneyparsed)
                     }
                 }
             }
         }
-        repository.saveData(MainActivity().persons, this)
+        repository.saveData(persons, this)
     }
 
     private fun calculateNewCurrentStatus(person: Partner, money: Double){
