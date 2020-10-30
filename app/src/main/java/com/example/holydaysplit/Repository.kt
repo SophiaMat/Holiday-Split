@@ -1,8 +1,7 @@
 package com.example.holydaysplit
 
-import android.app.PendingIntent.getActivity
 import android.content.Context
-import android.os.Environment
+import com.example.holydaysplit.Models.Partner
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.io.File

@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.holydaysplit.Models.Partner
 import kotlinx.android.synthetic.main.activity_start_data.*
 
 class StartDataActivity : AppCompatActivity() {

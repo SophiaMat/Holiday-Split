@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.RadioButton
-import kotlinx.android.synthetic.main.activity_main.*
+import com.example.holydaysplit.Models.Partner
 import kotlinx.android.synthetic.main.activity_spend_money.*
 
 class SpendMoneyActivity : AppCompatActivity() {
