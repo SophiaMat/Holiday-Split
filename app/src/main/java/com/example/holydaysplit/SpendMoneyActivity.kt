@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.RadioButton
+import com.example.holydaysplit.Models.Item
 import com.example.holydaysplit.Models.Partner
 import kotlinx.android.synthetic.main.activity_spend_money.*
 
@@ -39,8 +40,17 @@ class SpendMoneyActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    private fun calculateNewCurrentStatus(person: Partner, money: Double){
-        person.moneyToSpend = person.moneyToSpend - money
+    private fun calculateNewCurrentStatus(person: Partner, price: Double){
+        person.moneyToSpend = person.moneyToSpend - price
+        createNewItem(person, price)
+    }
+
+    private fun createNewItem(person: Partner, price: Double) {
+        if(itemDescription.text.toString().isNotEmpty()){
+            val item = Item(itemDescription.text.toString())
+            item.price = price
+            person.items.add(item)
+        }
     }
 
     private fun setNamesRadioButton(){
