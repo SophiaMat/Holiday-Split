@@ -11,7 +11,7 @@
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="30dp"
         android:background="@color/colorPrimary"
         android:fontFamily="@font/muli_bold"
         android:onClick="setNewMoneySpentValue"
@@ -41,10 +41,10 @@
         android:id="@+id/radioGroup"
         android:layout_width="0dp"
         android:layout_height="61dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/moneySpent">
+        app:layout_constraintTop_toBottomOf="@+id/itemDescription">
 
         <RadioButton
             android:id="@+id/radioButton1"
@@ -60,4 +60,18 @@
             android:fontFamily="@font/muli"
             android:text="Person2" />
     </RadioGroup>
+
+    <EditText
+        android:id="@+id/itemDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="description:"
+        android:inputType="textPersonName"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moneySpent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
