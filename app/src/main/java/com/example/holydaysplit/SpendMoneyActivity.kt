@@ -27,9 +27,9 @@ class SpendMoneyActivity : AppCompatActivity() {
         if(id!=-1){
             if(moneyparsed != null){
                 val radio: RadioButton = findViewById<RadioButton>(id)
-                for(item in persons){
-                    if (item.name == radio.text.toString()){
-                        calculateNewCurrentStatus(item, moneyparsed)
+                for(person in persons){
+                    if (person.name == radio.text.toString()){
+                        calculateNewCurrentStatus(person, moneyparsed)
                     }
                 }
             }
