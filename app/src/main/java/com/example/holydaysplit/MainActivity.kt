@@ -46,6 +46,12 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    fun showMoneyPreviousExpensesScreen(view: View){
+        val intent = Intent(this, SpendMoneyActivity::class.java).apply{
+        }
+        startActivity(intent)
+    }
+
     private fun setMoneyAppstart() {
         startingValue1.text = persons[0].startingMoney.toString() + "€"
         startingValue2.text = persons[1].startingMoney.toString() + "€"
