@@ -11,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SpendMoneyActivity"></activity>
+        <activity
+            android:name=".PreviousExpensesActivity"
+            android:label="@string/title_activity_previous_expenses"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".SpendMoneyActivity" />
         <activity
             android:name=".StartDataActivity"
             android:parentActivityName=".MainActivity">

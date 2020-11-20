@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun showMoneyPreviousExpensesScreen(view: View){
-        val intent = Intent(this, SpendMoneyActivity::class.java).apply{
+        val intent = Intent(this, PreviousExpensesActivity::class.java).apply{
         }
         startActivity(intent)
     }
