@@ -15,7 +15,7 @@
         android:layout_marginTop="30dp"
         android:background="@color/colorPrimary"
         android:fontFamily="@font/muli_bold"
-        android:onClick="deleteAllData"
+        android:onClick="showMoneyPreviousExpensesScreen"
         android:text="previous expenses"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
